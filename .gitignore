@@ -1,3 +1,9 @@
+# Resources
+/resource
+
+# idea
+/.idea
+
 # Logs
 logs
 *.log
