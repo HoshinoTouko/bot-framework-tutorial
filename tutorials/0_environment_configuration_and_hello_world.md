@@ -4,7 +4,7 @@ Bot-framework 是微软推出的一个平台，这个平台将开发、测试、
 
 ## 一些特性
 
-Bot-framework 支持多 Conversion，用户可以根据需求，定义每个 Conversation 的触发条件和对话流程。
+Bot-framework 支持多对话 (Dialogs)，用户可以根据需求，定义每个对话的触发条件和对话流程。
 
 Bot-framework 支持自定义的卡片和按钮形式。用户可以自行制作卡片、表单、选项按钮等组件来丰富 bot 的外观。并且，bot 会自行根据所运行的平台，相对应地调整组件的外观。例如在 telegram 平台上，按钮组件就可以被非常完美地原生支持。
 
@@ -13,7 +13,7 @@ Bot-framework 支持多数聊天工具和网页界面，用户可以根据需求
 
 ## 关于认知服务
 
-文章中将会使用微软的认知服务 ( cognitive services ) 作为主要的"智能"驱动平台，包括 LUIS(Language Understanding Intelligent Service) 服务，QnAMaker 服务，Custom Vision 服务等，提高 bot 对语言的识别能力和对交互的优化能力。有关微软认知服务的详细的信息请参照  
+文章中将会使用微软的认知服务 (cognitive services) 作为主要的"智能"驱动平台，包括 LUIS(Language Understanding Intelligent Service) 服务，QnAMaker 服务，Custom Vision 服务等，提高 bot 对语言的识别能力和对交互的优化能力。有关微软认知服务的详细的信息请参照  
 [https://azure.microsoft.com/en-us/services/cognitive-services/](https://azure.microsoft.com/en-us/services/cognitive-services/)
 
 # 环境配置
