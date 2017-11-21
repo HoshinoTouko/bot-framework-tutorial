@@ -1,14 +1,14 @@
 # Overview
 
-Bot-framework 是微软推出的一个平台，这个平台将开发、测试、部署 bot 的一系列流程整合起来，极大地方便了开发者。bot 支持使用 Node.js 和 C# 进行开发，这个系列的文章将以 Node.js 平台下的 Bot-framework 开发作为主要介绍内容，目标是完成一个可以进行相对智能的人机交互任务的聊天机器人。
+Bot-Framework 是微软推出的一个平台，这个平台将开发、测试、部署 bot 的一系列流程整合起来，极大地方便了开发者。bot 支持使用 Node.js 和 C# 进行开发，这个系列的文章将以 Node.js 平台下的 Bot-framework 开发作为主要介绍内容，目标是完成一个可以进行相对智能的人机交互任务的聊天机器人。
 
 ## 一些特性
 
-Bot-framework 支持多对话 (Dialogs)，用户可以根据需求，定义每个对话的触发条件和对话流程。
+Bot-Framework 支持多对话 (Dialogs)，用户可以根据需求，定义每个对话的触发条件和对话流程。
 
-Bot-framework 支持自定义的卡片和按钮形式。用户可以自行制作卡片、表单、选项按钮等组件来丰富 bot 的外观。并且，bot 会自行根据所运行的平台，相对应地调整组件的外观。例如在 telegram 平台上，按钮组件就可以被非常完美地原生支持。
+Bot-Framework 支持自定义的卡片和按钮形式。用户可以自行制作卡片、表单、选项按钮等组件来丰富 bot 的外观。并且，bot 会自行根据所运行的平台，相对应地调整组件的外观。例如在 telegram 平台上，按钮组件就可以被非常完美地原生支持。
 
-Bot-framework 支持多数聊天工具和网页界面，用户可以根据需求进行选择。
+Bot-Framework 支持多数聊天工具和网页界面，用户可以根据需求进行选择。
 ![](https://docs.microsoft.com/en-us/bot-framework/media/portal-channels-list.png)
 
 ## 关于认知服务
@@ -82,7 +82,7 @@ bot.dialog('/', [
 
 该如何进行调试呢？首先运行bot，然后打开 Bot Framework Emulator ，按照图示填写地址。
 
-![Bot framework 配置](0_environment_configuration_and_hello_world/images/1.jpg)
+![Bot Framework 配置](0_environment_configuration_and_hello_world/images/1.jpg)
 
 位于右下角的日志栏显示
 ```
@@ -91,6 +91,6 @@ bot.dialog('/', [
 ```
 表示模拟器已经成功连接上 bot 了。  
 让我们尝试发送几句对话
-![Bot framework 对话测试](0_environment_configuration_and_hello_world/images/2.jpg)
+![Bot Framework 对话测试](0_environment_configuration_and_hello_world/images/2.jpg)
 
 这样，一个简单的 Hello world bot 就完成了。
