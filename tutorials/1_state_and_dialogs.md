@@ -25,3 +25,49 @@
 
 当用户表现出对体育新闻的喜好时，bot 可以将用户的喜好存储于userData中。在之后的对话中，bot 可以针对该喜好进行一些特定内容的推送和筛选。  
 当用户询问天气时，bot 可以将询问天气的行为记录在 PrivateConversationData 下。如果用户在之后的对话询问"明天呢？"，bot 就可以明白用户询问的是明天的天气，而非明天的其他信息。
+
+## Dialogs
+
+### Overview
+
+Dialogs 是 Bot-Framework 的一个重要模块，它允许用户模块化地维护对话。bot 与用户的每次交流称作"会话"，每次会话由多个对话组成，每次的对话又可以用"对话流"来进行构建。可以将会话理解为对话的父结构。理解对话与会话的关系和相互之间的作用，可以极大方便我们开发聊天机器人，提高聊天机器人的代码可读性和组织结构。
+
+### Conversations through dialogs
+
+> 通过对话构建会话
+
+Bot-Framework 使用会话作为使用者和 bot 之间的交流。会话由多个对话组成。会话由用户定义，是一个可以重复使用的模块。在这里，我们定义一个 `askName` 的模块作为示例。
+
+#### 样例代码
+
+##### 对话本体
+
+```
+bot.dialog('askName', [
+    function (session) {
+        builder.Prompts.text(session, 'Hi! What\'s your name?');
+    },
+    function (session, results) {
+        session.userData.userName = results.response;
+        session.endDialog(`Hello ${session.userData.userName}!`);
+    }
+]);
+```
+
+##### 根会话中的跳转指令
+
+```
+if (!session.userData.name){
+    session.beginDialog('askName');
+    return;
+}
+```
+
+#### 执行
+
+执行 bot 程序，发送任意指令。此时 bot 并不知道你的名字，所以会将 `askName` 进栈。此时 bot 开始执行询问名字的对话。当对话执行 `session.endDialog()` 方法，`askName` 对话出栈并结束，重新回到根会话。这样就完成了一段询问名字的对话。同理，我们可以将每个单独的动作封装成单独的对话并统一管理。例如询问天气的对话，就可以单独封装起来，方便后期维护。
+
+###### 注
+
+在没有手动结束的情况下，会话和对话是重复执行的。
+
